@@ -1,0 +1,20 @@
+From: Security Alert [security@example-test.com](mailto:security@example-test.com)
+To: [test@example-test.com](mailto:test@example-test.com)
+Subject: URGENT: Verify Your Account Immediately
+Date: Mon, 17 Aug 2026 21:00:00 +0530
+Authentication-Results: example-test.com; spf=fail; dkim=fail; dmarc=fail
+Content-Type: text/plain; charset="UTF-8"
+
+URGENT SECURITY ALERT
+
+We detected unusual activity on your account.
+
+Your account may be suspended unless you verify your information immediately.
+
+Please click here to verify your account:
+http://example-test.com/verify-account
+
+You must confirm your password to prevent account suspension.
+
+Thank you,
+Security Team

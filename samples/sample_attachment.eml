@@ -1,0 +1,24 @@
+From: IT Support <support@example-test.com>
+To: test@example-test.com
+Subject: Security Update Required
+Date: Mon, 17 Aug 2026 21:30:00 +0530
+Authentication-Results: example-test.com; spf=fail; dkim=fail; dmarc=fail
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="BOUNDARY"
+
+--BOUNDARY
+Content-Type: text/plain; charset="UTF-8"
+
+URGENT SECURITY UPDATE
+
+Your account requires an immediate security update.
+
+Please review the attached document.
+
+--BOUNDARY
+Content-Type: text/plain
+Content-Disposition: attachment; filename="security_update.txt"
+
+This is a harmless test attachment.
+
+--BOUNDARY--
