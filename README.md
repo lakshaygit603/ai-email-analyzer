@@ -4,7 +4,7 @@ A Python-based cybersecurity tool for first-level phishing email triage. The ana
 
 ## Project Overview
 
-Phishing emails are a common initial access and social-engineering technique. Security analysts often need to quickly inspect suspicious messages and determine whether they require further investigation.
+Phishing emails are a common social-engineering technique. Security analysts often need to quickly inspect suspicious messages and determine whether they require further investigation.
 
 This project automates several first-level email analysis tasks and produces a risk score to help prioritize suspicious messages.
 
@@ -109,67 +109,23 @@ No external Python packages are currently required because the analyzer uses Pyt
 
 ## Usage
 
-Analyze a synthetic phishing email:
+Analyze the synthetic phishing email:
 
 ```bash
 python src/email_analyzer.py samples/sample_phishing.eml
 ```
 
-Analyze an email containing an attachment:
+Analyze the attachment test:
 
 ```bash
 python src/email_analyzer.py samples/sample_attachment.eml
 ```
 
-Analyze a normal email:
+Analyze the normal email:
 
 ```bash
 python src/email_analyzer.py samples/sample_normal.eml
 ```
-
-## Example Analysis
-
-The analyzer produces output similar to:
-
-```text
-=================================================================
-                 AI EMAIL ANALYZER
-=================================================================
-
-[EMAIL INFORMATION]
-
-From       : Security Alert <security@example-test.com>
-Subject    : URGENT: Verify Your Account Immediately
-
-[AUTHENTICATION RESULTS]
-
-SPF=fail
-DKIM=fail
-DMARC=fail
-
-[URL ANALYSIS]
-
- - http://example-test.com/verify-account
-
-[ATTACHMENT ANALYSIS]
-
-No attachments detected
-
-[SECURITY FINDINGS]
-
- - SPF authentication failed
- - DKIM authentication failed
- - DMARC authentication failed
- - Suspicious keywords detected
- - Suspicious URL detected
-
-[RESULT]
-
-Risk Score  : High
-Classification: HIGH RISK - Likely Phishing
-```
-
-The exact score depends on the indicators detected in the email.
 
 ## Risk Scoring
 
@@ -193,7 +149,7 @@ The analyzer uses an indicator-based scoring system.
 |  25–49 | Medium Risk    |
 | 50–100 | High Risk      |
 
-The scoring system is designed for demonstration and first-level triage. It is not intended to provide a definitive determination that an email is malicious.
+The scoring system is intended for demonstration and first-level triage. It does not provide a definitive determination that an email is malicious.
 
 ## Test Cases
 
